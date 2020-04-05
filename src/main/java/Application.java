@@ -42,7 +42,7 @@ public class Application
                 .filter(innerSum -> innerSum <= halfHeight)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
-        return heightGroupingMap.entrySet().stream().filter(entry -> entry.getValue() == 2).map(entry -> entry.getKey())
+        return heightGroupingMap.entrySet().stream().filter(entry -> entry.getValue() >= 2).map(entry -> entry.getKey())
                 .max(Integer::compareTo).orElseGet(() -> 0);
     }
 }

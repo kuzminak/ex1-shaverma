@@ -50,5 +50,25 @@ public class TakeMyMoneyTest {
 
         assertEquals(3000, result);
     }
+
+    @Test
+    public void takeMyMoneyTest6() {
+        List<Integer> prices = Arrays.asList(700, 800, 1300, 2000);
+        int N = 1;
+        int budget = 1600;
+        int result = Application.takeMyMoney(prices, N, budget);
+
+        assertEquals(1300, result);
+    }
+
+    @Test
+    public void takeMyMoneyTest9() {
+        List<Integer> prices = Arrays.asList(600, 500, 1000, 700);
+        int N = 3;
+        int budget = 800;
+        int result = Application.takeMyMoney(prices, N, budget);
+
+        assertEquals(0, result);
+    }
 }
 

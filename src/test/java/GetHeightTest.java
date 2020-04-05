@@ -32,7 +32,7 @@ public class GetHeightTest
 
 
     @Test
-    public void getHeight3()
+    public void getHeightTest3()
     {
         final List<Integer> rodsC = Arrays.asList(5, 7, 17);
 
@@ -43,12 +43,22 @@ public class GetHeightTest
 
 
     @Test
-    public void getHeight4()
+    public void getHeightTest4()
     {
         final List<Integer> rodsD = Arrays.asList(4, 5, 3, 6);
 
         int result = Application.getHeight(rodsD);
 
         assertEquals(9, result);
+    }
+
+    @Test
+    public void getHeightTest5()
+    {
+        final List<Integer> rodsD = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+        int result = Application.getHeight(rodsD);
+
+        assertEquals(10, result);
     }
 }
